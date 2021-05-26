@@ -17,14 +17,7 @@
     <a href="https://pypi.org/project/Telethon/"> <img src="https://img.shields.io/pypi/v/telethon?color=yellow&label=telethon&logo=python&logoColor=green&style=for-the-badge" /></a>
 </p>
 
-> ⭐️ Thanks to everyone who starred Daisy, That is the greatest pleasure we have !
-
-### https://daisyproject.studio
 ## Avaiilable on Telegram as [@Mystic_r0bot](https://t.me/Mystic_r0bot)
-
-# 🧙‍♀️ Deploy Guide
-Complete guide on deploying @Mystic_r0bot's clone on Heroku.
-
 # 🏃‍♂️ Easy Deploy 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xark0047/Mystic.git
 

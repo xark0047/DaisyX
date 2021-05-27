@@ -86,11 +86,6 @@ async def get_start_func(message, strings, edit=False):
             url=f"https://telegram.me/mystic_r0bot?startgroup=true",
         )
     )
-    # Handle error when user click the button 2 or more times simultaneously
-    with suppress(MessageNotModified):
-        await task(strings["start_hi"], reply_markup=buttons)
-
-
 @register(regexp="get_help", f="cb")
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):

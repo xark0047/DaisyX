@@ -80,12 +80,27 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(InlineKeyboardButton(strings["btn_help"], callback_data="get_help"))
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
+        InlineKeyboardButton(
+            strings["btn_source"], url="https://github.com/TeamDaisyX/"
+        ),
+    )
+    buttons.add(
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/DaisyXUpdates"),
+        InlineKeyboardButton(
+            strings["btn_group"], url="https://t.me/DaisySupport_Official"
+        ),
+    )
     buttons.add(
         InlineKeyboardButton(
             "👸🏼 Add Mystic to your group",
-            url=f"https://telegram.me/mystic_r0bot?startgroup=true",
+            url=f"https://telegram.me/daisyxbot?startgroup=true",
         )
     )
+    # Handle error when user click the button 2 or more times simultaneously
+    with suppress(MessageNotModified):
+        await task(strings["start_hi"], reply_markup=buttons)
+
+
 @register(regexp="get_help", f="cb")
 @get_strings_dec("pm_menu")
 async def help_cb(event, strings):
